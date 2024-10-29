@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Marco",
+        "edad": 24,
+        "rol": "profesor"
+    },
+    {
+        "nombre": "Mauro",
+        "edad": 24,
+        "rol": "Tutor"
+    },
+    {
+        "nombre": "Lucas",
+        "edad": 24,
+        "rol": "Tutor Adjunto"
+    }
+]
