@@ -1,14 +1,14 @@
 const carrito = JSON.parse(localStorage.getItem("carrito")) || []
 const contenedorProductos = document.getElementById("contenedor-productos")
-const botonOferta = document.getElementById("oferta")
+const botonOfertas = document.getElementById("ofertas")
 const botonTodos = document.getElementById("todos")
-const barraBusqueda = document.getElementById("barra-busqueda"); // Campo de entrada para la búsqueda
+const barraBusqueda = document.getElementById("busqueda")
 
 const renderizarProductos = (array) => {
-    // prd = cada objeto de mi array 
 
     contenedorProductos.innerHTML = ""
 
+    // prd = cada objeto de mi array 
     array.forEach((prd) => {
 
         const div = document.createElement("div")
@@ -57,26 +57,23 @@ const guardarCarrito = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
-botonOferta.addEventListener("click", () => {
-    const productosOferta = stockProductos.filter(prd => prd.oferta === true);
-    renderizarProductos(productosOferta)
-});
+botonOfertas.addEventListener("click", () => {
+    const productosOfertas = stockProductos.filter((prd) => prd.oferta === true)
+
+    renderizarProductos(productosOfertas)
+})
 
 botonTodos.addEventListener("click", () => {
     renderizarProductos(stockProductos)
-});
+})
 
-// Función para filtrar productos por nombre
-const filtrarPorNombre = () => {
-    const textoBusqueda = barraBusqueda.value.toLowerCase(); // Convertir a minúsculas para hacer la búsqueda case-insensitive
+barraBusqueda.addEventListener("input", () => {
+    const textoBusqueda = barraBusqueda.value.toLowerCase()
 
-    const productosFiltrados = stockProductos.filter(prd =>
-        prd.nombre.toLowerCase().includes(textoBusqueda) // Filtrar por coincidencia parcial
-    );
+    const productosFiltrados = stockProductos.filter(prd => prd.nombre.toLowerCase().includes(textoBusqueda))
 
-    renderizarProductos(productosFiltrados); // Renderizar productos que coinciden con la búsqueda
-};
+    renderizarProductos(productosFiltrados)
+})
 
-barraBusqueda.addEventListener("input", filtrarPorNombre);
 
 renderizarProductos(stockProductos)

@@ -5,7 +5,7 @@ const stockProductos = [
         precio: 1000,
         desc: "Producto en venta.",
         img: "https://prd.place/200",
-        oferta: true
+        oferta: true,
     },
     {
         id: 2,
@@ -13,7 +13,8 @@ const stockProductos = [
         precio: 2000,
         desc: "Producto en venta.",
         img: "https://prd.place/201",
-        oferta: false
+        oferta: false,
+
     },
     {
         id: 3,
@@ -21,7 +22,7 @@ const stockProductos = [
         precio: 3000,
         desc: "Producto en venta.",
         img: "https://prd.place/202",
-        oferta: true
+        oferta: true,
     },
     {
         id: 4,
@@ -29,7 +30,7 @@ const stockProductos = [
         precio: 4000,
         desc: "Producto en venta.",
         img: "https://prd.place/203",
-        oferta: false
+        oferta: false,
     },
     {
         id: 5,
@@ -37,7 +38,7 @@ const stockProductos = [
         precio: 5000,
         desc: "Producto en venta.",
         img: "https://prd.place/204",
-        oferta: true
+        oferta: true,
     },
     {
         id: 6,
@@ -45,7 +46,7 @@ const stockProductos = [
         precio: 6000,
         desc: "Producto en venta.",
         img: "https://prd.place/205",
-        oferta: false
+        oferta: false,
     },
     {
         id: 7,
@@ -53,6 +54,6 @@ const stockProductos = [
         precio: 7000,
         desc: "Producto en venta.",
         img: "https://prd.place/206",
-        oferta: true
+        oferta: true,
     },
 ]
