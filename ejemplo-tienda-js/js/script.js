@@ -4,6 +4,24 @@ const botonOfertas = document.getElementById("ofertas")
 const botonTodos = document.getElementById("todos")
 const barraBusqueda = document.getElementById("busqueda")
 
+// fetch("./js/stock.json")
+//     .then((respuesta) => respuesta.json)
+//     .then( (productos) => {
+//         renderizarProductos(productos)
+//     })
+
+const getData = async () => {
+
+    try {
+        const respuesta = await fetch("./js/stock.json")
+        const productos = await respuesta.json()
+
+        renderizarProductos(productos)
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 const renderizarProductos = (array) => {
 
     contenedorProductos.innerHTML = ""
@@ -75,5 +93,4 @@ barraBusqueda.addEventListener("input", () => {
     renderizarProductos(productosFiltrados)
 })
 
-
-renderizarProductos(stockProductos)
+window.addEventListener("DOMContentLoaded", getData)

@@ -1,0 +1,17 @@
+{
+  "name": "proyecto-coder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "estilos": "sass --watch scss/main.scss css/style.css"
+  },
+  "author": "Marco Serlik <marco.serlik@hotmail.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "eslint": "^9.15.0",
+    "luxon": "^3.5.0"
+  }
+}
